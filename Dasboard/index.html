@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Energy Meter Monitoring</title>
+    <link rel="stylesheet" href="script.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="brand-title">Energy Meter</div>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#graphs">Graphs</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+        <section id="graphs" class="graphs-section">
+            <h2>Energy Meter Graphs</h2>
+            <div class="graph-container">
+                <div class="graph" id="voltage-graph">
+                    <h3>Voltage Graph</h3>
+                    <iframe style="border-radius: 25px;" width="100%" height="260" style="border: 1px solid #cccccc;"
+                        src="https://thingspeak.com/channels/1747418/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line">
+                    </iframe>
+                </div>
+                <div class="graph" id="current-graph">
+                    <h3>Current Graph</h3>
+                    <iframe style="border-radius: 25px;" width="100%" height="260" style="border: 1px solid #cccccc;"
+                        src="https://thingspeak.com/channels/1747418/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line">
+                    </iframe>
+                </div>
+                <div class="graph" id="power-graph">
+                    <h3>Power Graph</h3>
+                    <iframe style="border-radius: 25px;" width="100%" height="260" style="border: 1px solid #cccccc;"
+                        src="https://thingspeak.com/channels/1747418/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line">
+                    </iframe>
+                </div>
+                <div class="graph" id="frequency-graph">
+                    <h3>Frequency Graph</h3>
+                    <iframe style="border-radius: 25px;" width="100%" height="260" style="border: 1px solid #cccccc;"
+                        src="https://thingspeak.com/channels/1747418/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line">
+                    </iframe>
+                </div>
+                <div class="graph" id="power-factor-graph">
+                    <h3>Power Factor Graph</h3>
+                    <iframe style="border-radius: 25px;" width="100%" height="260" style="border: 1px solid #cccccc;"
+                        src="https://thingspeak.com/channels/1747418/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line">
+                    </iframe>
+                </div>
+                <div class="graph" id="energy-graph">
+                    <h3>Energy Graph</h3>
+                    <iframe style="border-radius: 25px;" width="100%" height="260" style="border: 1px solid #cccccc;"
+                        src="https://thingspeak.com/channels/1747418/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Smart Energy Meter Monitoring</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementsByClassName('toggle-button')[0]
+        const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+        toggleButton.addEventListener('click', () => {
+            navbarLinks.classList.toggle('active')
+        })
+    </script>
+</body>
+</html>
